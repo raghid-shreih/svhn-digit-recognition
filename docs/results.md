@@ -8,14 +8,14 @@ The counts below were recalculated from the **printed 10 × 10 test confusion ma
 
 | Model | Correct / test images | Accuracy |
 | --- | ---: | ---: |
-| Deeper fully connected network | 13,399 / 18,000 | 74.44% |
+| Deeper dense neural network (ANN) | 13,399 / 18,000 | 74.44% |
 | Regularized convolutional network | 16,162 / 18,000 | **89.79%** |
 
-The notebook's printed classification report rounds the CNN result to **0.90**, while its final written conclusion says **91%**. The confusion-matrix diagonal sums to 16,162, or **89.79%**, so this project uses that checked value. The earlier dense model's written observation rounded 74.44% to approximately 75%.
+Accuracy is computed as the sum of the confusion matrix's diagonal divided by the 18,000 test images.
 
 ![Ten-by-ten confusion matrix for the regularized CNN, showing test image counts for each actual and predicted digit](../assets/cnn-confusion-matrix.svg)
 
-Rows represent actual digits and columns predictions. Cell colors are scaled within each actual digit, while annotations show counts. Digit **3** had the lowest recall, 1,452/1,719 = **84.47%**. Notable confusions were 8 → 6 (108 images) and 5 → 6 (82 images). The printed report's class-level values are rounded, and some prose observations in the notebook differ from the matrix; the matrix is the numerical source here.
+Rows represent actual digits and columns predictions. Cell colors are scaled within each actual digit, while annotations show counts. Digit **3** had the lowest recall, 1,452/1,719 = **84.47%**. Notable confusions were 8 → 6 (108 images) and 5 → 6 (82 images). The matrix is the numerical source for these observations.
 
 **Interpretation limits:** A stronger result on this particular test split supports the CNN comparison in this experiment, but selecting a final model after inspecting test outcomes can bias any claimed prospective performance. A new run may differ because of the explicit stratified validation split in the public runner, library versions, hardware, and stochastic training. The official Stanford RGB MAT files are a separate dataset path and use a new grayscale conversion; their metrics cannot be treated as a reproduction of the course HDF5 run.
 

@@ -4,11 +4,11 @@ A computer vision case study comparing dense neural networks with convolutional 
 
 ## Results at a glance
 
-The completed course notebook recorded a **deeper CNN at 16,162/18,000 correct (89.79%)**, compared with **13,399/18,000 (74.44%)** for a deeper dense network on its grayscale course subset. These values were independently computed from the notebook's printed test confusion matrices; **the models have not been retrained in this repository**.
+The completed course notebook recorded a **deeper CNN at 16,162/18,000 correct (89.79%)**, compared with **13,399/18,000 (74.44%)** for a deeper dense neural network (ANN) on its grayscale course subset. These values were independently computed from the notebook's printed test confusion matrices; **the models have not been retrained in this repository**.
 
 ![Comparison of dense and convolutional models on the course subset: 74.44 percent versus 89.79 percent](assets/model-comparison.svg)
 
-See the [results note](docs/results.md) for the CNN's ten-class confusion matrix, the correction of a **91%** claim in the notebook conclusion, and interpretation limits. The public code makes it possible to run a new experiment, which may produce different metrics.
+See the [results note](docs/results.md) for the CNN's ten-class confusion matrix and interpretation limits. The public code makes it possible to run a new experiment, which may produce different metrics.
 
 ## What this demonstrates
 
